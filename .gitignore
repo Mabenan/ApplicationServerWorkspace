@@ -1,0 +1,6 @@
+*
+!reps
+!cmake
+!cmake/*
+!.gitignore
+!*/.gitignore
