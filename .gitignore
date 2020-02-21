@@ -1,6 +1,7 @@
 build
 reps/*
 !reps
+!reps/notempty
 !cmake
 !cmake/*
 !.gitignore
