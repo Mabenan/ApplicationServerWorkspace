@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
-project("HomeERP" LANGUAGES CXX)
+project(HomeERP LANGUAGES CXX)
+message(${CMAKE_PROJECT_NAME})
 include(cmake/GitUtils.cmake)
 include(GoogleTest.cmake)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
