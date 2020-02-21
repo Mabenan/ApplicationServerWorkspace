@@ -1,0 +1,30 @@
+language: cpp
+sudo: required
+dist: bionic
+addons:
+  apt:
+    sources:
+    - sourceline: 'ppa:beineri/opt-qt-5.12.3-bionic'
+    packages:
+    - qt512-meta-full
+    - libgl1-mesa-dev
+    - cmake
+before_install:
+  - git clone --recursive https://codereview.qt-project.org/qt-labs/qthttpserver
+  - cd qthttpserver
+  - qmake
+  - make
+  - sudo make install
+  - cd ..
+  - sudo rm -r -f qthttpserver
+compiler: g++
+script:
+  - qmake --version
+  - mkdir build
+  - cd build
+  - cmake ..
+  - cmake --build .
+  - ls lib
+  - ls bin
+  - cp -r lib bin/plugins
+  - make test
