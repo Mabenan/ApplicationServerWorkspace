@@ -22,8 +22,8 @@ compiler: g++
 script:
   - qmake --version
   - mkdir build
+  - cmake -Bbuild
   - cd build
-  - cmake ..
   - cmake --build .
   - ls lib
   - ls bin
