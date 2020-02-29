@@ -84,12 +84,7 @@
                 </defs>
                 				
                 <linux command="cmake" generator="UnixMakefiles" use-default="true">
-                    					
-                    <defs/>
-                    					
-                    <undefs/>
-                    				
-                </linux>
+				</linux>
                 				
                 <win32 command="cmake" generator="MinGWMakefiles" use-default="true">
                     					
@@ -98,8 +93,6 @@
                     <undefs/>
                     				
                 </win32>
-                				
-                <undefs/>
                 			
             </storageModule>
             		

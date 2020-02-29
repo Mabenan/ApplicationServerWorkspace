@@ -6,3 +6,4 @@ reps/*
 !cmake/*
 !.gitignore
 !*/.gitignore
+test_qxorm.db
