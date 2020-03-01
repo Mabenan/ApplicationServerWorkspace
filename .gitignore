@@ -7,3 +7,5 @@ reps/*
 !.gitignore
 !*/.gitignore
 test_qxorm.db
+/CMakeSettings.json
+/.vs

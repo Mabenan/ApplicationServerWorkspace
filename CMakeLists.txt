@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(HomeERP LANGUAGES CXX)
+project(HomeERP LANGUAGES CXX C)
 message(${CMAKE_PROJECT_NAME})
 include(cmake/GitUtils.cmake)
 include(GoogleTest.cmake)
