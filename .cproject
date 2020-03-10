@@ -84,15 +84,15 @@
                 </defs>
                 				
                 <linux command="cmake" generator="UnixMakefiles" use-default="true">
-				</linux>
-                				
-                <win32 command="cmake" generator="MinGWMakefiles" use-default="true">
                     					
                     <defs/>
                     					
                     <undefs/>
                     				
-                </win32>
+                </linux>
+                				
+                <win32 command="cmake" generator="MinGWMakefiles" use-default="true">
+				</win32>
                 				
                 <undefs/>
                 			
