@@ -9,3 +9,4 @@ reps/*
 test_qxorm.db
 /CMakeSettings.json
 /.vs
+*.pyc
