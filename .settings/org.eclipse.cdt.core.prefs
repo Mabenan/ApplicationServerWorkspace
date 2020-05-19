@@ -1,4 +1,10 @@
 eclipse.preferences.version=1
+environment/project/de.marw.cmake.cdt.lsp.toolchain.cmake.837085209.404741139/CMAKE_CXX_COMPILER/delimiter=;
+environment/project/de.marw.cmake.cdt.lsp.toolchain.cmake.837085209.404741139/CMAKE_CXX_COMPILER/operation=remove
+environment/project/de.marw.cmake.cdt.lsp.toolchain.cmake.837085209.404741139/CMAKE_C_COMPILER/delimiter=;
+environment/project/de.marw.cmake.cdt.lsp.toolchain.cmake.837085209.404741139/CMAKE_C_COMPILER/operation=remove
+environment/project/de.marw.cmake.cdt.lsp.toolchain.cmake.837085209.404741139/append=true
+environment/project/de.marw.cmake.cdt.lsp.toolchain.cmake.837085209.404741139/appendContributed=true
 environment/project/de.marw.cmake.cdt.lsp.toolchain.cmake.837085209/CMAKE_CXX_COMPILER/delimiter=;
 environment/project/de.marw.cmake.cdt.lsp.toolchain.cmake.837085209/CMAKE_CXX_COMPILER/operation=remove
 environment/project/de.marw.cmake.cdt.lsp.toolchain.cmake.837085209/CMAKE_C_COMPILER/delimiter=;
