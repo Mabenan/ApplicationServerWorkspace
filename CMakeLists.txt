@@ -34,7 +34,7 @@ set(LIB_FOLDER "lib")
 endif()
 set(INCLUDE_FOLDER "include")
 set(PLUGIN_FOLDER "${EXEC_FOLDER}/plugins")
-add_rep(QxOrm QxOrm)
+add_rep(QxOrm Mabenan)
 set_target_properties(QxOrm PROPERTIES
                       ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
                       LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
