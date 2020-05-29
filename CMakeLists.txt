@@ -53,6 +53,7 @@ set_target_properties(QxOrm PROPERTIES
                       LIBRARY_OUTPUT_DIRECTORY_RELWITHDEBINFO "${CMAKE_BINARY_DIR}/lib"
                       RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO "${CMAKE_BINARY_DIR}/bin"
                      )
+                 add_rep(QxOrmHelperMacros Mabenan)
 add_rep(ApplicationServer Mabenan)
 add_rep(ApplicationClient Mabenan)
 add_rep(ApplicationServerListCommands Mabenan)
