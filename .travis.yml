@@ -19,10 +19,10 @@ before_install:
   - source /opt/qt512/bin/qt512-env.sh
 compiler: g++
 script:
-  - cmake --version
+  - /usr/local/bin/cmake --version
   - qmake --version
   - mkdir build
   - cd build
-  - cmake ..
-  - cmake --build .
+  - /usr/local/bin/cmake ..
+  - /usr/local/bin/cmake --build .
   - make test
