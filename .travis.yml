@@ -9,13 +9,14 @@ addons:
     - qt512-meta-full
     - libgl1-mesa-dev
 before_install:
-  - source /opt/qt512/bin/qt512-env.sh
+  - sudo apt-get remove -y cmake
   - mkdir cmakebuild
   - cd cmakebuild
-  - curl -sSL https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.sh -o ./cmake-install.sh
+  - curl -sSL https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Linux-x86_64.sh -o ./cmake-install.sh
   - chmod +x ./cmake-install.sh
-  - ./cmake-install.sh --prefix=/usr/local --skip-license
+  - sudo ./cmake-install.sh --prefix=/usr/local --skip-license
   - cd ..
+  - source /opt/qt512/bin/qt512-env.sh
 compiler: g++
 script:
   - qmake --version
