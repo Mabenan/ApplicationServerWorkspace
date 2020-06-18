@@ -8,16 +8,10 @@ addons:
     packages:
     - qt512-meta-full
     - libgl1-mesa-dev
-    - cmake
 before_install:
   - source /opt/qt512/bin/qt512-env.sh
-  - git clone --recursive https://codereview.qt-project.org/qt-labs/qthttpserver
-  - cd qthttpserver
-  - qmake
-  - make
-  - sudo make install
-  - cd ..
-  - sudo rm -r -f qthttpserver
+  - wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Linux-x86_64.sh
+  - sh cmake-3.17.3-Linux-x86_64.sh
 compiler: g++
 script:
   - qmake --version
