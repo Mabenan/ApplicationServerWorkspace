@@ -4,9 +4,9 @@ dist: bionic
 addons:
   apt:
     sources:
-    - sourceline: 'ppa:beineri/opt-qt-5.12.3-bionic'
+    - sourceline: 'ppa:beineri/opt-qt-5.14.2-bionic'
     packages:
-    - qt512-meta-full
+    - qt514-meta-full
     - libgl1-mesa-dev
 before_install:
   - sudo apt-get remove -y cmake
