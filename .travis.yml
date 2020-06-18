@@ -10,8 +10,11 @@ addons:
     - libgl1-mesa-dev
 before_install:
   - source /opt/qt512/bin/qt512-env.sh
+  - mkdir cmakebuild
+  - cd cmakebuild
   - wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Linux-x86_64.sh
-  - sh cmake-3.17.3-Linux-x86_64.sh
+  - bash ./cmake-3.17.3-Linux-x86_64.sh
+  - cd ..
 compiler: g++
 script:
   - qmake --version
