@@ -12,8 +12,9 @@ before_install:
   - source /opt/qt512/bin/qt512-env.sh
   - mkdir cmakebuild
   - cd cmakebuild
-  - wget https://github.com/Kitware/CMake/releases/download/v3.17.3/cmake-3.17.3-Linux-x86_64.sh
-  - bash ./cmake-3.17.3-Linux-x86_64.sh
+  - curl -sSL https://cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.sh -o ./cmake-install.sh
+  - chmod +x ./cmake-install.sh
+  - ./cmake-install.sh --prefix=/usr/local --skip-license
   - cd ..
 compiler: g++
 script:
