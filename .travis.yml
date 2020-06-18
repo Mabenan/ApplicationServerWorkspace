@@ -16,7 +16,7 @@ before_install:
   - chmod +x ./cmake-install.sh
   - sudo ./cmake-install.sh --prefix=/usr/local --skip-license
   - cd ..
-  - source /opt/qt512/bin/qt512-env.sh
+  - source /opt/qt514/bin/qt514-env.sh
 compiler: g++
 script:
   - /usr/local/bin/cmake --version
