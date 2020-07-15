@@ -30,7 +30,7 @@ script:
   - cd ..
   - mkdir client
   - cd client
-  - /usr/local/bin/cmake ../.. -_HRP_BUILD_SERVER=OFF
+  - /usr/local/bin/cmake -D_HRP_BUILD_SERVER=OFF ../..
   - /usr/local/bin/cmake --build .
   - cd ..
   - cd ..
