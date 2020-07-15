@@ -23,5 +23,19 @@ script:
   - qmake --version
   - mkdir build
   - cd build
-  - /usr/local/bin/cmake ..
+  - mkdir server
+  - cd server
+  - /usr/local/bin/cmake ../..
   - /usr/local/bin/cmake --build .
+  - cd ..
+  - mkdir client
+  - cd client
+  - /usr/local/bin/cmake ../.. -_HRP_BUILD_SERVER=OFF
+  - /usr/local/bin/cmake --build .
+  - cd ..
+  - cd ..
+after_success:
+  - cd build/server
+  - cpack
+  - cd ../../build/client
+  - cpack

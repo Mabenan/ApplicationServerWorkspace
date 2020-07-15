@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
-
-project(HomeERP LANGUAGES CXX C)
+option(_HRP_BUILD_SERVER "If you enable _HRP_BUILD_SERVER the server will build" ON)
+if(${_HRP_BUILD_SERVER})
+project(HomeRPServer LANGUAGES CXX C)
+else()
+project(HomeRPClient LANGUAGES CXX C)
+endif()
 message(${CMAKE_PROJECT_NAME})
 include(cmake/GitUtils.cmake)
 #include(GoogleTest.cmake)
@@ -55,8 +59,15 @@ set_target_properties(QxOrm PROPERTIES
                       RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO "${CMAKE_BINARY_DIR}/bin"
                      )
                  add_rep(QxOrmHelperMacros Mabenan)
+if(_HRP_BUILD_SERVER)
 add_rep(ApplicationServer Mabenan)
-add_rep(ApplicationClient Mabenan)
 add_rep(ApplicationServerListCommands Mabenan)
 add_rep(ApplicationServerQxServer Mabenan)
+else()
+add_rep(ApplicationClient Mabenan)
+endif()
 add_rep(HERP.AuthorizationModule Mabenan)
+
+SET(CPACK_GENERATOR "DEB")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "KK") #required
+INCLUDE(CPack)
