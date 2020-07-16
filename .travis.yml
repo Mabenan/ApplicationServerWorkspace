@@ -34,8 +34,17 @@ script:
   - /usr/local/bin/cmake --build .
   - cd ..
   - cd ..
-after_success:
+before_deploy:
   - cd build/server
   - cpack
   - cd ../../build/client
   - cpack
+deploy:
+ provider: releases
+ api_key: $GITHUB_OAUTH_KEY
+ file:
+  - /home/travis/build/Mabenan/ApplicationServerWorkspace/build/server/HomeRPServer-1.4.7-Linux.deb
+  - /home/travis/build/Mabenan/ApplicationServerWorkspace/build/client/HomeRPClient-1.4.7-Linux.deb
+ skip_cleanup: true
+ on:
+    tags: true
